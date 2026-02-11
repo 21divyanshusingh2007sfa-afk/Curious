@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wait... 💫</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      font-family: Arial, sans-serif;
+      color: white;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .box {
+      background: rgba(255,255,255,0.1);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+      max-width: 400px;
+    }
+
+    h1 {
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      background: #ff5f6d;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: #ff8a8a;
+    }
+
+    .hidden {
+      display: none;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .heart {
+      font-size: 40px;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h1>Hey... 🌙</h1>
+  <p>I know you’re a little upset.</p>
+
+  <button onclick="nextStep()">Click only if you're slightly less angry on me 😌</button>
+
+  <div id="step2" class="hidden">
+    <p>Okay good... something curious ✔</p>
+    <button onclick="finalStep()">One more click?To find something that makes
+        your day special
+    </button>
+  </div>
+
+  <div id="final" class="hidden">
+    <div class="heart">❤️</div>
+    <p>
+      I don't like when you're upset.<br>
+      Your smile suits you better.<br><br>
+      woho sab bekar thinking aap apne dimaag se nikalo 
+      yeh request h plz yeh sab mat kiya karo madam<br>
+      So here's a small mission:<br>
+      Smile for 5 seconds right now.
+      Gussa hone pe aachi nhi lagti toh smile karte raho.
+    </p>
+  </div>
+</div>
+
+<script>
+  function nextStep() {
+    document.getElementById("step2").style.display = "block";
+  }
+
+  function finalStep() {
+    document.getElementById("final").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
